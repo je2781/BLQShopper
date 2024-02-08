@@ -1,0 +1,37 @@
+
+
+.main-slider .slick-dots {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+.main-slider .slick-dots li {
+    display: inline-block;
+    margin: 0 -3px 0 -3px;
+}
+
+.main-slider .slick-dots li button {
+    border: 0;
+    background: grey;
+    text-indent: -9999px;
+    overflow: hidden;
+    width: 24px;
+    height: 24px;
+    font-size: 0;
+    padding: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.main-slider .slick-dots li.slick-active button {
+    width: 60px;
+    background: #ffffff;
+}
+.main-slider .slick-dots li.slick-active {
+    margin-right: 49px;
+}
+
+

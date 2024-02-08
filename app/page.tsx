@@ -1,10 +1,16 @@
-import Image from "next/image";
+'use client'
+
 import Navbar from "./Navbar";
+import ShortcutComponent from "./Shortcut";
+import Slider from "./Slider";
 
 export default function Home() {
   return (
-    <main >
-      <Navbar />
-    </main>
+    <>
+      <Slider />
+      <ShortcutComponent/>
+    </>
   );
 }
+
+

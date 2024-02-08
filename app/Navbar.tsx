@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="flex flex-row fixed navbar-height bg-white w-full px-48 py-4">
+    <nav className="flex flex-row fixed navbar-height bg-white w-full px-48 py-4 top-0 left-0 z-10">
       <div className="flex flex-row gap-x-44">
         <div className="gap-x-4 flex flex-row">
           <Image

@@ -1,6 +1,6 @@
 
 
-class Banner{
+export class Banner{
     bannerId: number;
     title: string;
     pcImageUrl: string;
@@ -28,4 +28,6 @@ class Banner{
 
 
 }
+
+
 

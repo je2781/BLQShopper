@@ -28,9 +28,6 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-.navbar-height{
-  height: 4.9rem;
-}
 
 h1,
 h2,
@@ -40,13 +37,26 @@ h5 {
   margin-top: 0;
 }
 
-#wrapper {
-  overflow-x: hidden;
-  position: relative;
+.wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr; /* Navbar on top, main content below */
+  min-height: 100vh;
 }
+
+main {
+  overflow-y: auto; 
+}
+
+.navbar-height {
+  height: 4.9rem;
+}
+
+
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+
+
