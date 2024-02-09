@@ -1,5 +1,3 @@
-
-
 .prev-banner{
   position:relative;
   width: 42px;
@@ -21,9 +19,9 @@
   height: 42px;
   left: 71rem;
   padding-left: 1rem;
- background-color: gray;
- display: flex;
- justify-items: center;
+  background-color: gray;
+  display: flex;
+  justify-items: center;
 
 }
 .prev-collection{
@@ -62,7 +60,6 @@
   overflow: hidden;
   width: 8px;
   height: 8px;
-  font-size: 0;
   padding: 2px;
   border-radius: 50%;
   cursor: pointer;
@@ -74,3 +71,19 @@
 .slick-slider .slick-dots li.slick-active button {
   background: #ffffff;
 }
+
+@media screen and (max-width: 575px) {
+  .slick-slider .slick-dots li button{
+    width: 6px;
+    height: 6px;
+
+  }
+}
+
+@media screen and (max-width: 1536px) and (min-width: 1280px) {
+  .next-banner{
+    bottom: 10.5rem;
+    left: 68rem;
+  }
+}
+

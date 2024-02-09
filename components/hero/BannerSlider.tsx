@@ -12,6 +12,7 @@ import { Settings } from "@/types/types";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "@/public/css/slider.css";
+import { useWindowSize } from "@uidotdev/usehooks";
 
 interface sliderProps {
   settings: Settings;
@@ -28,12 +29,14 @@ export default function BannerSliderComponent({
   next,
   previous,
 }: sliderProps) {
+  //tracking browser window width dynamically
+  const {width} = useWindowSize();
   return (
     <>
       <Slider {...settings} ref={sliderRef}>
         {data.map((datum, index) => {
           return (
-            <div key={index} className="slide px-4">
+            <div key={index} className={`slide ${width! < 960 ? 'px-0' : 'px-4'}`}>
               <Link href={datum.linkUrl}>
                 <img
                   src={datum.pcImageUrl}

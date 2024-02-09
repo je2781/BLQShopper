@@ -2,9 +2,12 @@ import bannerRepo from "@/data/repository/banner/banner-repo";
 import { Banner } from "@/data/response/banner";
 import React, { useEffect, useRef, useState } from "react";
 import BannerSliderComponent from "./BannerSlider";
+import { useWindowSize } from "@uidotdev/usehooks";
 
 export default function Hero() {
   const [bannersData, setBannersData] = useState<Banner[]>([]);
+    //tracking browser window width dynamically
+    const {width} = useWindowSize();
     //creating a ref to controll the navigation arrows of slider
   let sliderRef = useRef<any>(null);
 
@@ -14,6 +17,7 @@ export default function Hero() {
   const previous = () => {
     sliderRef?.current?.slickPrev();
   };
+  //fetching banner data
   useEffect(() => {
     async function getBannerData() {
       const data = await bannerRepo.getBanners();
@@ -23,32 +27,17 @@ export default function Hero() {
   }, []);
 
   const settings = {
-    className: "center bg-white banner-slider",
-    centerMode: true,
+    className: "bg-white banner-slider",
+    centerMode: width! < 960 ? false : true,
     infinite: true,
-    centerPadding: "140px",
+    centerPadding: width! < 960 ? "0px" : "140px",
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 1000,
     autoplay: true,
     autoplaySpeed: 4000,
     dots: true,
-    responsive: [
-      {
-        breakpoint: 959,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        }
-      },
-      {
-        breakpoint: 575,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+
   };
 
   return (
