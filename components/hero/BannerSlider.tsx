@@ -29,7 +29,7 @@ export default function BannerSliderComponent({
   previous,
 }: sliderProps) {
   return (
-    <div>
+    <>
       <Slider {...settings} ref={sliderRef}>
         {data.map((datum, index) => {
           return (
@@ -45,17 +45,14 @@ export default function BannerSliderComponent({
           );
         })}
       </Slider>
-      <span className={`prev-banner cursor-pointer`} onClick={previous}>
-        <Image src={chevronLeft} height={11} width={11} alt="prev arrow" />
-      </span>
-      <span className={`next-banner cursor-pointer`} onClick={next}>
-        <Image
-          src={chevronRight}
-          height={11}
-          width={11}
-          alt="next arrow"
-        />
-      </span>
-    </div>
+      <div className="bg-white nav-arrows">
+        <span className={`prev-banner cursor-pointer`} onClick={previous}>
+          <Image src={chevronLeft} height={11} width={11} alt="prev arrow" />
+        </span>
+        <span className={`next-banner cursor-pointer`} onClick={next}>
+          <Image src={chevronRight} height={11} width={11} alt="next arrow" />
+        </span>
+      </div>
+    </>
   );
 }

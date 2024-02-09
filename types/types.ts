@@ -9,5 +9,8 @@ export interface Settings {
     autoplay: boolean,
     autoplaySpeed: number,
     dots: boolean,
-    arrows: boolean
+    arrows?: boolean;
+    nextArrow?: React.JSX.Element;
+    prevArrow?: React.JSX.Element;
+    responsive?: Array<any>;
   };

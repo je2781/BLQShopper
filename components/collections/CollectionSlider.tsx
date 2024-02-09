@@ -72,29 +72,27 @@ export default function CollectionSliderComponent({
           onClick={next}
         />
       </div>
-      <div className="hidden collection-grid grid grid-rows-1">
-        <div className="grid grid-cols-2 gap-6 collection-cols">
-          {data.map((singleItem, index) => (
-            <div key={index} className="w-full h-full">
-              <Link href="/" className="flex flex-col justify-start gap-y-2">
-                <img
-                  src={singleItem.publication.media[0].uri}
-                  alt="collection image"
-                  className="object-contain"
-                />
-                <h3 className="text-sm">{singleItem.publication.title}</h3>
-                <span className="font-bold text-md">
-                  <span className="text-red-600 text-md">{`${singleItem.publication.priceInfo.rate}%`}</span>
-                  {singleItem.publication.priceInfo.discountPrice}
-                </span>
-                <span className="flex flex-row text-xs">
-                  <Image src={rating} height={10} width={10} alt="rating" />
-                  {singleItem.publication.rating}
-                </span>
-              </Link>
-            </div>
-          ))}
-        </div>
+      <div className="hidden grid grid-cols-2 collection-grid gap-x-4 gap-y-10">
+        {data.map((singleItem, index) => (
+          <div key={index} className="w-full h-full">
+            <Link href="/" className="flex flex-col justify-start gap-y-2">
+              <img
+                src={singleItem.publication.media[0].uri}
+                alt="collection image"
+                className="object-contain"
+              />
+              <h3 className="text-sm">{singleItem.publication.title}</h3>
+              <span className="font-bold text-md">
+                <span className="text-red-600 text-md">{`${singleItem.publication.priceInfo.rate}%`}</span>
+                {singleItem.publication.priceInfo.discountPrice}
+              </span>
+              <span className="flex flex-row text-xs">
+                <Image src={rating} height={10} width={10} alt="rating" />
+                {singleItem.publication.rating}
+              </span>
+            </Link>
+          </div>
+        ))}
       </div>
     </div>
   );

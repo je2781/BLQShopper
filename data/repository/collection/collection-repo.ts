@@ -42,8 +42,15 @@ class CollectionRepo implements CollectionRepoImpl {
                     ),
                     new PriceInfo(
                       item["publication"]["priceInfo"]["price"],
-                      item["publication"]["priceInfo"]["discountPrice"],
-                      item["publication"]["priceInfo"]["discountRate"]
+                      item["publication"]["priceInfo"]["applyCoupon"] == true
+                        ? item["publication"]["priceInfo"][
+                            "couponDiscountPrice"
+                          ]
+                        : item["publication"]["priceInfo"]["discountPrice"],
+                      item["publication"]["priceInfo"]["applyCoupon"] == true
+                        ? item["publication"]["priceInfo"]["couponDiscountRate"]
+                        : item["publication"]["priceInfo"]["discountRate"],
+                      item["publication"]["priceInfo"]["applyCoupon"]
                     ),
                     item["publication"]["discounts"].map(
                       (discount: any) =>

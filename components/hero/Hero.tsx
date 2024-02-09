@@ -23,24 +23,22 @@ export default function Hero() {
   }, []);
 
   const settings = {
-    className: "center bg-white pt-20 banner-slider",
+    className: "center bg-white banner-slider",
     centerMode: true,
     infinite: true,
-    centerPadding: "190px",
+    centerPadding: "140px",
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 1000,
     autoplay: true,
     autoplaySpeed: 4000,
     dots: true,
-    fade: false,
-    arrows: false,
     responsive: [
       {
         breakpoint: 959,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
         }
       },
       {

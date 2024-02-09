@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 import collectionRepo from "@/data/repository/collection/collection-repo";
 import { Item } from "@/data/response/collection/item";
-import CollectionSliderComponent from "./CollectionContent";
+import CollectionSliderComponent from "./CollectionSlider";
 
 export default function CollectionComponent() {
   const [collectionData, setCollectionData] = useState<Item[]>([]);
