@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <nav className="flex flex-row fixed navbar-height bg-white w-full px-48 py-4 top-0 z-10 small-device-nav">
       <div className="flex flex-row gap-x-44 navbar-items">
-        <div className="gap-x-4 flex flex-row">
+        <div className="gap-x-4 flex flex-row navbar-brand-container">
           <Image
             src="/images/tv.svg"
             alt="test valley Logo"

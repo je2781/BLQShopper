@@ -104,6 +104,10 @@ h5 {
   .slick-slider.collection-slider {
     display: none;
   }
+  .navbar-items {
+    position: relative;;
+  }
+
 }
 
 @media screen and (max-width: 1024px) and (min-width: 740px) {
@@ -124,11 +128,6 @@ h5 {
     display: flex;
     flex-direction: row;
     column-gap: 8px;
-  }
-  .navbar-items {
-    display: flex;
-    flex-direction: row;
-    column-gap: 18rem;
   }
 }
 
@@ -152,11 +151,6 @@ h5 {
     column-gap: 8px;
   }
 
-  .navbar-items {
-    display: flex;
-    flex-direction: row;
-    column-gap: 12rem;
-  }
 }
 
 @media screen and (max-width: 575px) {
@@ -189,7 +183,4 @@ h5 {
     column-gap: 0.5rem;
   }
 
-  .navbar-items {
-    column-gap: 8rem;
-  }
 }
