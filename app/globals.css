@@ -6,6 +6,9 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,10 +19,14 @@
   }
 }
 
+
 body {
   color: rgb(var(--foreground-rgb));
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(
       to bottom,
       transparent,
@@ -37,14 +44,13 @@ h5 {
   margin-top: 0;
 }
 
-.wrapper {
-  display: grid;
-  grid-template-rows: auto 1fr; /* Navbar on top, main content below */
-  min-height: 100vh;
+#wrapper{
+  overflow-x: hidden;
+  position: relative;
 }
 
-main {
-  overflow-y: auto; 
+main{
+  overflow-x: hidden;
 }
 
 .navbar-height {
@@ -52,10 +58,77 @@ main {
 }
 
 
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@media screen and (max-width: 959px){
+  .single-collection{
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+  .nav-arrows, .slick-slider.collection-slider{
+    display: none;
+  }
+  .collection-content{
+    padding: 0 2.5rem 0 2.5rem;
+  }
+  .shortcut-content{
+    padding: 2.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .shortcut-content img{
+    width: 56px;
+    height: 56px;
+  }
+  .shortcut-content a{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  .shortcut-content a h3{
+    align-self: center;
+    font-size: 11px;
+  }
+  .collection-grid h3, .collection-grid span{
+    font-size: 14px;
+  }
+  .banner-slider{
+    height: 100%;
+    padding: auto auto;
+  }
+}
+
+@media screen and (max-width: 959px)and (min-width: 576px){
+  .collection-grid{
+    display: block;
+    width: 40rem;
+    display: grid;
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+  .collection-grid .collection-cols{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .collection-grid{
+    display: block;
+    width: 18rem;
+  }
+  .shortcut-content img{
+    width: 48px;
+    height: 48px;
+  }
+  .shortcut-content{
+    padding: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
 

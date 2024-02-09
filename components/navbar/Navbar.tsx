@@ -8,7 +8,7 @@ export default function Navbar() {
       <div className="flex flex-row gap-x-44">
         <div className="gap-x-4 flex flex-row">
           <Image
-            src="/tv.svg"
+            src="/images/tv.svg"
             alt="test valley Logo"
             width={130}
             height={37}
@@ -16,7 +16,7 @@ export default function Navbar() {
           />
           <div className="flex flex-row gap-x-1 cursor-pointer">
             <Image
-              src="/menu.svg"
+              src="/images/menu.svg"
               alt="burger Logo"
               width={18}
               height={18}
@@ -27,7 +27,7 @@ export default function Navbar() {
         <SearchBar />
         <div className="flex flex-row gap-x-2">
             <Image
-                src="/benefits.svg"
+                src="/images/benefits.svg"
                 alt="benefits Logo"
                 width={28}
                 height={28}

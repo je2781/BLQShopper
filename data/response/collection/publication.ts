@@ -7,6 +7,8 @@ export class Publication{
     id: number;
     title: string;
     rating: number;
+    code: string;
+    prodType: number;
     productName: string;
     brandName: string;
     media: Media[];
@@ -16,6 +18,8 @@ export class Publication{
     constructor(
         id: number,
         title: string,
+        code: string,
+        prodType: number,
         rating: number,
         productName: string,
         brandName: string,
@@ -29,6 +33,8 @@ export class Publication{
         this.productName = productName;
         this.brandName  = brandName;
         this.media  = media;
+        this.code = code;
+        this.prodType = prodType;
         this.priceInfo  = priceInfo;
         this.discounts  = discounts;
 

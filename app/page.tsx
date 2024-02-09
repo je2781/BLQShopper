@@ -1,14 +1,16 @@
 'use client'
 
-import Navbar from "./Navbar";
-import ShortcutComponent from "./Shortcut";
-import Slider from "./Slider";
+import CollectionComponent from "@/components/collections/Collection";
+import Hero from "@/components/hero/Hero";
+import Navbar from "@/components/navbar/Navbar";
+import ShortcutComponent from "@/components/shortcut/Shortcut";
 
 export default function Home() {
   return (
     <>
-      <Slider />
+      <Hero/>
       <ShortcutComponent/>
+      <CollectionComponent />
     </>
   );
 }

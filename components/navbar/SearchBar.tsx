@@ -4,7 +4,7 @@ const SearchBar = () => {
   return (
     <div className={`rounded-md border-2 border-gray-200 flex flex-row gap-x-2 w-7/12 p-2 h-12 active:border-green-300 focus:ring-green-300`}>
       <Image
-        src="/search.svg"
+        src="/images/search.svg"
         alt="search Logo"
         width={16}
         height={16}

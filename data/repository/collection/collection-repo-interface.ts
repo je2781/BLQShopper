@@ -1,9 +1,9 @@
-import { Collection } from "@/data/response/collection/collection";
+import { Item } from "@/data/response/collection/item";
 
 export interface CollectionRepoImpl {
   getCollections: (
 
-  ) => Promise<Collection[]>;
+  ) => Promise<Item[]>;
 
 
 }

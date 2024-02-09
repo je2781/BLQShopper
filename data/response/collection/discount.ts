@@ -3,8 +3,8 @@
 export class Discount{
     id: number;
     qty: number;
-    remain: number;
-    name: string;
+    remain?: number;
+    name?: string;
     type: string;
     value: number;
 
