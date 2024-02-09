@@ -36,7 +36,7 @@ export default function CollectionSliderComponent({
         {data.map((singleItem, index) => (
           <div key={index} className="slide px-1 w-48 h-full">
             <Link href="/" className="flex flex-col justify-start gap-y-2">
-              <img
+              <Image
                 src={singleItem.publication.media[0].uri}
                 alt="collection image"
                 className="object-contain w-full h-full"
@@ -76,7 +76,7 @@ export default function CollectionSliderComponent({
         {data.map((singleItem, index) => (
           <div key={index} className="w-full h-full">
             <Link href="/" className="flex flex-col justify-start gap-y-2">
-              <img
+              <Image
                 src={singleItem.publication.media[0].uri}
                 alt="collection image"
                 className="object-contain"

@@ -35,7 +35,7 @@ export default function BannerSliderComponent({
           return (
             <div key={index} className="slide px-4">
               <Link href={datum.linkUrl}>
-                <img
+                <Image
                   src={datum.pcImageUrl}
                   alt="banner image"
                   className="object-cover "
