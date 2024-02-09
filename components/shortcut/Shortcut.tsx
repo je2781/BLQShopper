@@ -21,7 +21,7 @@ export default function ShortcutComponent() {
         {shortcutData.map((datum, index) => (
           <Link href={datum.linkUrl} className="flex flex-col gap-y-4" key={index}>
             <div className="w-16 inline-block">
-              <Image
+              <img
                 src={datum.imageUrl}
                 alt="shortcut image"
                 width={64}
