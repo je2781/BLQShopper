@@ -18,18 +18,21 @@ import chevronRightOut from "@/public/images/chevron-right-outline.svg";
 interface collectionSliderProps {
   settings: Settings;
   data: SingleItem[];
-  next: () => void;
-  previous: () => void;
-  sliderRef: LegacyRef<any>;
 }
 
 export default function CollectionSliderComponent({
   settings,
-  sliderRef,
   data,
-  next,
-  previous,
 }: collectionSliderProps) {
+  //creating a ref to controll the navigation arrows of slider
+  let sliderRef = useRef<any>(null);
+
+  const next = () => {
+    sliderRef?.current?.slickNext();
+  };
+  const previous = () => {
+    sliderRef?.current?.slickPrev();
+  };
   return (
     <div className="collection-container">
       <Slider {...settings} ref={sliderRef}>

@@ -15,15 +15,6 @@ export default function CollectionComponent() {
     getCollectionData();
   }, []);
 
-  //creating a ref to controll the navigation arrows of slider
-  let sliderRef = useRef<any>(null);
-
-  const next = () => {
-    sliderRef?.current?.slickNext();
-  };
-  const previous = () => {
-    sliderRef?.current?.slickPrev();
-  };
 
   const settings = {
     className: "bg-white h-70 collection-slider",
@@ -49,11 +40,8 @@ export default function CollectionComponent() {
             <h3 className="text-xs break-words w-52">{datum.subTitle}</h3>
           </div>
           <CollectionSliderComponent
-            next={next}
             data={datum.singleItems}
             settings={settings}
-            previous={previous}
-            sliderRef={sliderRef}
           />
         </div>
       ))}
