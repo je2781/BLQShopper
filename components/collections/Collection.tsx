@@ -32,7 +32,7 @@ export default function CollectionComponent() {
   };
 
   return (
-    <section className="px-48 w-full bg-white flex flex-col gap-y-16 collection-content">
+    <section className="px-48 w-full bg-white flex flex-col gap-y-16 collection-content align-center justify-center">
       {collectionData.map((datum, index) => (
         <div className="flex flex-row gap-x-12 justify-center single-collection" key={index}>
           <div className="flex flex-col gap-y-2">

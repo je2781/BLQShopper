@@ -31,14 +31,27 @@ export default function Hero() {
     centerMode: width! < 960 ? false : true,
     infinite: true,
     centerPadding:
+      //responsive design for center padding of slider
       width! < 960
         ? "0px"
         : width! >= 1536 && width! < 1700
-        ? "380px"
-        : width! >= 1800
         ? "300px"
+        : width! >= 1400 && width! <= 1535
+        ? "245px"
+        : width! >= 1300 && width! < 1400
+        ? "190px"
+        : width! >= 1100 && width! < 1200
+        ? "90px"
+        : width! >= 1200 && width! < 1300
+        ? "140px"
+        : width! > 1024 && width! < 1251
+        ? "70px"
+        : width! >= 1800 && width! <= 1950
+        ? "475px"
+        : width! > 1950
+        ? "540px"
         : width! >= 1700 && width! < 1800
-        ? "442px"
+        ? "400px"
         : "140px",
     slidesToShow: 1,
     slidesToScroll: 1,

@@ -33,6 +33,14 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
 h1,
 h2,
 h3,
@@ -67,9 +75,6 @@ h5 {
     flex-direction: column;
     row-gap: 2rem;
   }
-  .collection-content {
-    padding: 0 2.5rem 0 2.5rem;
-  }
   .shortcut-content {
     display: grid;
     justify-content: center;
@@ -91,7 +96,7 @@ h5 {
     font-size: 11px;
   }
   .collection-content {
-    padding: 0 18%;
+    padding: 1% 22%;
   }
   .collection-grid h3,
   .collection-grid span {
@@ -103,6 +108,12 @@ h5 {
   .nav-arrows,
   .slick-slider.collection-slider {
     display: none;
+  }
+}
+
+@media screen and (max-width: 1250px) and (min-width: 1024px) {
+  .navbar {
+    padding: 1rem 4.2rem;
   }
 }
 
@@ -203,15 +214,5 @@ h5 {
     column-gap: 2rem;
   }
 }
-
-
-@media screen and (max-width: 1536px) and (min-width: 1025px) {
-  .next-banner{
-    right: -68rem;
-  }
-}
-
-
-
 
 
