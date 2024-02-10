@@ -33,13 +33,13 @@ export default function Hero() {
     centerPadding:
       width! < 960
         ? "0px"
+        : width! >= 1536 && width! < 1700
+        ? "380px"
         : width! >= 1800
+        ? "300px"
+        : width! >= 1700 && width! < 1800
         ? "442px"
-        : width! >= 1536 && width! < 1600
-        ? "320px"
-        : width! > 1600 && width! < 1800 
-        ? '380px'
-        : "160px",
+        : "140px",
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 1000,

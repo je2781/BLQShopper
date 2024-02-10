@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="flex flex-row fixed navbar-height bg-white w-full px-48 py-4 top-0 z-10 small-device-nav justify-center">
-      <div className="flex flex-row gap-x-44 navbar-items">
+    <nav className="flex flex-row fixed navbar-height bg-white w-full md:px-48 sm:px-4 py-4 top-0 z-10 small-device-nav justify-center">
+      <div className="flex flex-row gap-x-44 navbar-items justify-between">
         <div className="gap-x-4 flex flex-row navbar-brand-container">
           <Image
             src="/images/tv.svg"
