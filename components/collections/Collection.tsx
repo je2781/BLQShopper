@@ -34,7 +34,7 @@ export default function CollectionComponent() {
   return (
     <section className="px-48 w-full bg-white flex flex-col gap-y-16 collection-content">
       {collectionData.map((datum, index) => (
-        <div className="flex flex-row gap-x-16 justify-between single-collection" key={index}>
+        <div className="flex flex-row gap-x-12 justify-center single-collection" key={index}>
           <div className="flex flex-col gap-y-2">
             <h1 className="font-bold text-lg break-words w-52">{datum.title}</h1>
             <h3 className="text-xs break-words w-52">{datum.subTitle}</h3>

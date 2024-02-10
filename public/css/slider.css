@@ -17,7 +17,7 @@
   bottom: 10.5rem;
   border-radius: 50%;
   height: 42px;
-  left: 71rem;
+  right: -71rem;
   padding-left: 1rem;
   background-color: gray;
   display: flex;
@@ -70,20 +70,5 @@
 
 .slick-slider .slick-dots li.slick-active button {
   background: #ffffff;
-}
-
-@media screen and (max-width: 575px) {
-  .slick-slider .slick-dots li button{
-    width: 6px;
-    height: 6px;
-
-  }
-}
-
-@media screen and (max-width: 1536px) and (min-width: 1280px) {
-  .next-banner{
-    bottom: 10.5rem;
-    left: 68rem;
-  }
 }
 

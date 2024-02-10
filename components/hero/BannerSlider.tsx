@@ -29,14 +29,13 @@ export default function BannerSliderComponent({
   next,
   previous,
 }: sliderProps) {
-  //tracking browser window width dynamically
-  const {width} = useWindowSize();
+
   return (
-    <>
+    < >
       <Slider {...settings} ref={sliderRef}>
         {data.map((datum, index) => {
           return (
-            <div key={index} className={`slide ${width! < 960 ? 'px-0' : 'px-4'}`}>
+            <div key={index} className='slide px-4'>
               <Link href={datum.linkUrl}>
                 <img
                   src={datum.pcImageUrl}

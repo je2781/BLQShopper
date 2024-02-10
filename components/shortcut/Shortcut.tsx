@@ -17,7 +17,7 @@ export default function ShortcutComponent() {
   }, []);
 
   return (
-    <section className="px-48 w-full flex flex-row gap-x-9 bg-white shortcut-content pt-10 pb-16">
+    <section className="px-48 w-full flex flex-row gap-x-9 bg-white shortcut-content pt-10 pb-16 justify-center">
         {shortcutData.map((datum, index) => (
           <Link href={datum.linkUrl} className="flex flex-col gap-y-4" key={index}>
             <div className="w-16 inline-block">

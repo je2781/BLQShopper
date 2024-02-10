@@ -192,4 +192,21 @@ h5 {
   .navbar-items {
     column-gap: 8rem;
   }
+  .slick-slider .slick-dots li button{
+    width: 6px;
+    height: 6px;
+
+  }
+  
 }
+
+
+@media screen and (min-width: 1025px) {
+  .next-banner{
+    right: -68rem;
+  }
+}
+
+
+
+

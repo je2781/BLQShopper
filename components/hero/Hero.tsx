@@ -6,9 +6,9 @@ import { useWindowSize } from "@uidotdev/usehooks";
 
 export default function Hero() {
   const [bannersData, setBannersData] = useState<Banner[]>([]);
-    //tracking browser window width dynamically
-    const {width} = useWindowSize();
-    //creating a ref to controll the navigation arrows of slider
+  //tracking browser window width dynamically
+  const { width } = useWindowSize();
+  //creating a ref to controll the navigation arrows of slider
   let sliderRef = useRef<any>(null);
 
   const next = () => {
@@ -30,14 +30,22 @@ export default function Hero() {
     className: "bg-white banner-slider",
     centerMode: width! < 960 ? false : true,
     infinite: true,
-    centerPadding: width! < 960 ? "0px" : "140px",
+    centerPadding:
+      width! < 960
+        ? "0px"
+        : width! >= 1800
+        ? "442px"
+        : width! >= 1536 && width! < 1600
+        ? "320px"
+        : width! > 1600 && width! < 1800 
+        ? '380px'
+        : "160px",
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 1000,
     autoplay: true,
     autoplaySpeed: 4000,
     dots: true,
-
   };
 
   return (
