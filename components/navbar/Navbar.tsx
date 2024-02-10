@@ -39,7 +39,7 @@ export default function Navbar() {
             Login/Signup
           </Link>
         </div>
-        <div className="hidden small-device-actions">
+        <div className="hidden small-device-actions right-0">
           <Image
             src="/images/bell.svg"
             alt="search Logo"
