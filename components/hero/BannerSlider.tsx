@@ -36,7 +36,7 @@ export default function BannerSliderComponent({
         {data.map((datum, index) => {
           return (
             <div key={index} className='slide px-4'>
-              <Link href={datum.linkUrl}>
+              <Link href={datum.linkUrl} className="outline-none">
                 <img
                   src={datum.pcImageUrl}
                   alt="banner image"

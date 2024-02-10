@@ -38,7 +38,7 @@ export default function CollectionSliderComponent({
       <Slider {...settings} ref={sliderRef}>
         {data.map((singleItem, index) => (
           <div key={index} className="slide px-1 w-48 h-full">
-            <Link href="/" className="flex flex-col justify-start gap-y-2">
+            <Link href="/" className="flex flex-col justify-start gap-y-2 outline-none">
               <img
                 src={singleItem.publication.media[0].uri}
                 alt="collection image"
