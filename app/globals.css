@@ -197,15 +197,20 @@ h5 {
     height: 6px;
 
   }
-  
+  .navbar-items {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+  }
 }
 
 
-@media screen and (min-width: 1025px) {
+@media screen and (max-width: 1536px) and (min-width: 1025px) {
   .next-banner{
     right: -68rem;
   }
 }
+
 
 
 
