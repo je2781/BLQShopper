@@ -165,17 +165,24 @@
   }
 }
 
-@media screen and (min-width: 1081px) and (max-width: 1200px){
+@media screen and (min-width: 1125px) and (max-width: 1200px){
 
   .next-banner{
     left: 59.1rem;
   }
 }
 
+@media screen and (min-width: 1081px) and (max-width: 1124px){
+
+  .next-banner{
+    left: 58.6rem;
+  }
+}
+
 @media screen and (min-width: 1051px) and (max-width: 1080px){
 
   .next-banner{
-    left: 57.6rem;
+    left: 57.2rem;
   }
 }
 
