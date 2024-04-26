@@ -2,9 +2,7 @@
 import collectionRepo from "@/data/repository/collection/collection-repo";
 import { Item } from "@/data/response/collection/item";
 import CollectionSliderComponent from "./CollectionSlider";
-import dynamic from "next/dynamic";
 
-const DelayedConnectionSlider = dynamic(() => import('./CollectionSlider'));
 
 export async function getCollectionData() {
   const data = await collectionRepo.getCollections();
@@ -29,14 +27,14 @@ export default async function CollectionComponent() {
   };
 
   return (
-    <section className="w-full bg-white flex flex-col gap-y-16 collection-content align-center justify-center">
+    <section className="w-full bg-white flex flex-col gap-y-16 collection-content items-center justify-center">
       {collectionData.map((datum, index) => (
         <div className="flex flex-row gap-x-12 justify-center single-collection" key={index}>
           <div className="flex flex-col gap-y-2">
             <h1 className="font-bold text-lg break-words w-52">{datum.title}</h1>
             <h3 className="text-xs break-words w-52">{datum.subTitle}</h3>
           </div>
-          <DelayedConnectionSlider
+          <CollectionSliderComponent
             data={datum['items']}
             settings={settings}
           />
