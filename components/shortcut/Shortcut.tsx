@@ -1,20 +1,16 @@
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 import shortcutRepo from "@/data/repository/shortcut/shortcut-repo";
 import { Shortcut } from "@/data/response/shortcut";
 
-export default function ShortcutComponent() {
-  const [shortcutData, setShortcutData] = useState<Shortcut[]>([]);
+export async function getShortcutData() {
+  const data = await shortcutRepo.getShortcuts();
+  return data;
+}
 
-  useEffect(() => {
-    async function getShortcutData() {
-      const data = await shortcutRepo.getShortcuts();
-      setShortcutData(data);
-    }
-    getShortcutData();
-  }, []);
+export default async function ShortcutComponent() {
+  const shortcutData = await getShortcutData();
 
   return (
     <section className="px-48 w-full flex flex-row gap-x-9 bg-white shortcut-content pt-10 pb-16 justify-center 2xl:mt-16">

@@ -5,13 +5,14 @@ import axios from "axios";
 
 class BannerRepo implements BannerRepoImpl {
   async getBanners() {
-    const result = await axios.get(
+    const res = await axios.get(
       MAIN_BANNER_API
     );
 
-    const updatedResult = result.data as Array<any>;
+
+    const updatedResult = res.data as Array<any>;
     return updatedResult.map(
-      (banner) =>
+      (banner) => 
         new Banner(
           banner["mainBannerId"],
           banner["title"],

@@ -22,9 +22,6 @@ body {
   color: rgb(var(--foreground-rgb));
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   background: linear-gradient(
       to bottom,
       transparent,
@@ -58,10 +55,6 @@ h5 {
   top: 4.9rem;
 }
 
-#wrapper {
-  overflow-x: hidden;
-  position: relative;
-}
 
 @layer utilities {
   .text-balance {

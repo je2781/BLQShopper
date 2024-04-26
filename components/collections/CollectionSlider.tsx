@@ -1,3 +1,5 @@
+'use client';
+
 import React from "react";
 import { LegacyRef, useEffect, useRef, useState } from "react";
 import Link from "next/link";
@@ -17,7 +19,7 @@ import chevronRightOut from "@/public/images/chevron-right-outline.svg";
 
 interface collectionSliderProps {
   settings: Settings;
-  data: SingleItem[];
+  data: any[];
 }
 
 export default function CollectionSliderComponent({

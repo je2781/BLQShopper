@@ -5,11 +5,13 @@ import { Shortcut } from "@/data/response/shortcut";
 
 class ShortcutRepo implements ShortcutRepoImpl {
   async getShortcuts() {
-    const result = await axios.get(
+    const res = await fetch(
       SHORTCUT_API 
     );
 
-    const updatedResult = result.data as Array<any>;
+    const data = await res.json();
+
+    const updatedResult = data as Array<any>;
     return updatedResult.map(
       (shortcut) =>
         new Shortcut(

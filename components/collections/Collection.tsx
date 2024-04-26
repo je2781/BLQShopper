@@ -1,20 +1,17 @@
-import { useEffect, useRef, useState } from "react";
 
 import collectionRepo from "@/data/repository/collection/collection-repo";
 import { Item } from "@/data/response/collection/item";
 import CollectionSliderComponent from "./CollectionSlider";
+import dynamic from "next/dynamic";
 
-export default function CollectionComponent() {
-  const [collectionData, setCollectionData] = useState<Item[]>([]);
+const DelayedConnectionSlider = dynamic(() => import('./CollectionSlider'));
 
-  useEffect(() => {
-    async function getCollectionData() {
-      const data = await collectionRepo.getCollections();
-      setCollectionData(data);
-    }
-    getCollectionData();
-  }, []);
-
+export async function getCollectionData() {
+  const data = await collectionRepo.getCollections();
+  return data;
+}
+export default async function CollectionComponent() {
+    const collectionData = await getCollectionData();
 
   const settings = {
     className: "bg-white h-70 collection-slider",
@@ -39,8 +36,8 @@ export default function CollectionComponent() {
             <h1 className="font-bold text-lg break-words w-52">{datum.title}</h1>
             <h3 className="text-xs break-words w-52">{datum.subTitle}</h3>
           </div>
-          <CollectionSliderComponent
-            data={datum.singleItems}
+          <DelayedConnectionSlider
+            data={datum['items']}
             settings={settings}
           />
         </div>
