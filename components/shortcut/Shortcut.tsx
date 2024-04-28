@@ -1,8 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 
 import shortcutRepo from "@/data/repository/shortcut/shortcut-repo";
-import { Shortcut } from "@/data/response/shortcut";
 
 export async function getShortcutData() {
   const data = await shortcutRepo.getShortcuts();
