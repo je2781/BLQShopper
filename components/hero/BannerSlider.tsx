@@ -79,12 +79,12 @@ export default function BannerSliderComponent({ data,  }: sliderProps) {
       <Slider {...config} ref={sliderRef}>
         {data.map((datum, index) => {
           return (
-            <div key={index} className="slide px-4 w-full lg:h-fit h-12">
+            <div key={index} className="slide px-4">
               <Link href={datum.linkUrl} className="outline-none">
                 <img
                   src={datum.pcImageUrl}
                   alt="banner image"
-                  className="object-cover"
+                  className="object-cover lg:h-fit w-full h-56"
                 />
               </Link>
             </div>
