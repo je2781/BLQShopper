@@ -84,7 +84,7 @@ export default function BannerSliderComponent({ data,  }: sliderProps) {
                 <img
                   src={datum.pcImageUrl}
                   alt="banner image"
-                  className="object-cover lg:h-fit w-full"
+                  className="object-cover lg:h-fit w-full h-8"
                 />
               </Link>
             </div>
