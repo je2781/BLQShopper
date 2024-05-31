@@ -167,10 +167,6 @@ h5 {
 }
 
 @media screen and (max-width: 575px) {
-  .slick-slider.banner-slider .slide img {
-    height: 10rem;
-    width: 100vw;
-  }
   .collection-grid {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
