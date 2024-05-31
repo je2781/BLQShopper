@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "testvalley.kr",
+  title: "testvalley",
   description: "TestValley Shopper app for pc clients",
 };
 
