@@ -14,7 +14,7 @@ I started with designing the models/interfaces for the repos, response, requests
 
 ## How to run the app
 
-From the main directory, run (npm run dev) to start the server on your local host. The deployment link can be seen on https://blq-shopper-g9qu51sx8-je2781.vercel.app.
+From the main directory, run (npm run dev) to start the server on your local host. The deployment link can be seen on https://blq-shopper.vercel.app.
 
 
 
