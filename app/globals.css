@@ -168,7 +168,7 @@ h5 {
 
 @media screen and (max-width: 575px) {
   .slick-slider.banner-slider .slide img {
-    height: 30rem;
+    height: 20rem;
     width: 100vw;
   }
   .collection-grid {
